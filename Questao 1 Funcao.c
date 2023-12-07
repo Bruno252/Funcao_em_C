@@ -1,8 +1,20 @@
 #include <stdlib.h>
 #include <stdio.h>
+#define TAM 2
+struct dados{
 
-float  mediar(float soma){
-return soma/2;
+    float  numero;
+    float  soma;
+    float  media;
+    int i;
+
+};
+struct dados numeros;
+
+float  mediar(float numero){
+    numeros.soma+=numero;
+return numeros.media = numeros.soma/2;
+
 }
 
 void limpatudo(){
@@ -17,22 +29,17 @@ void limpatudo(){
 
 int main(){
 
-    float  numero;
-    float  soma;
-    float  media;
-    int i;
+int i;
 
-    for(i=0;i<2;i++){
-
+    for(i=0;i<TAM;i++){
         printf("%d Numero:",i+1);
-        scanf("%f",&numero);
-        soma+=numero;
-
+        scanf("%f",&numeros.numero);
+        mediar(numeros.numero);
     }
 
-    media=mediar(soma);
+    
     //limpatudo();
-    resultado(media);
+    resultado(numeros.media);
 
     return 0;
 }
